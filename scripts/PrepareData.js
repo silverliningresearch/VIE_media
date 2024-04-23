@@ -168,7 +168,7 @@ function prepareInterviewData() {
     let flight = flight_list_full[i];
 
     //airport_airline
-    flight.quota_id = flight.AirlineCode + "-" + flight.Dest;//code for compare
+    flight.quota_id = flight.Dest;//code for compare
 
     //current_period:2023-02
     //flight.Date: 08-02-2023
@@ -203,6 +203,6 @@ function prepareInterviewData() {
     }
   }
    //console.log("this_month_flight_list: ", this_month_flight_list);
-   //console.log("today_flight_list: ", today_flight_list);
-   //console.log("daily_plan_data: ", daily_plan_data);
+  // console.log("today_flight_list: ", today_flight_list);
+  // console.log("daily_plan_data: ", daily_plan_data);
 }

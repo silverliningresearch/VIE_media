@@ -5,15 +5,13 @@
   
 		<script src="data/quota_data.js"></script>
     <script src="data/invalid_cases.js"></script>
-		<script src="data/VIE_departures_flight_list.js"></script>
-
+		
     <script src="scripts/PrepareData.js"></script>
 		<script src="scripts/CalculateData.js"></script>
     <script src="scripts/flight_search.js"></script>
-
-    <script type="text/javascript" src="https://silverliningresearch.github.io/daily_plan_data_sur_v2/VIE_ADV/interview_statistics.js"></script> 
+    <script type="text/javascript" src="https://silverliningresearch.github.io/daily_plan_data_sur_v2/VIE_media/interview_statistics.js"></script> 
     <script type="text/javascript" src="https://silverliningresearch.github.io/VIE_ADV/data/VIE_departures_flight_list.js"></script> 
-
+    
     <link href="css/styles.css" rel ="stylesheet" type="text/css" />
     <style>
       .table-font {
@@ -86,9 +84,10 @@
         //add data
         for (i = 0; i < daily_plan_data.length; i++) {
           var row = daily_plan_data[i];
+          if (row.TER)
             { 
                 data.addRows([[row.Date_Time,
-                row.TER, 
+                (row.TER), 
                 row.Gate, 
                 row.Flight, row.DestName, 
                 //row.doop, 
